@@ -1,0 +1,98 @@
+/*
+ Project Name: js-hangman
+ Author: Harold Bradley III
+*/
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td  {margin: 0; padding: 0; background-repeat: none;}
+abbr, acronym, fieldset, img {border: 0;}
+ol, ul, li {list-style: none;}
+address, caption, cite, code, dfn, th, var {font-weight: normal; font-style: normal;}
+strong {font-weight: bold; font-style: normal;}
+em {font-weight: normal; font-style: italic;}
+h1, h2, h3, h4, h5, h6, pre,code { font-size:1em; font-weight: normal;}
+q:before, q:after {content: '';}
+caption, th {text-align: left;}
+a img,:link img,:visited img { border:none }
+
+body {
+ margin: 0 auto;
+ padding-top: 50px;
+ width: 1120px;
+ font-family:  'Verdana', 'Tahoma', 'Arial', sans-serif;
+ font-size: small;
+ color: #000000;
+ background-color: #ffffff;
+ background-repeat: repeat;
+ text-align: center; /* Needed for compatibility with IE5&6. */ min-width: 960px; /* Needed for compatibility with Netscape. */ min-height: 20px;
+ background-image: url(img/texture.jpg);
+}
+
+
+
+ul.button{margin-left: 285px; height: 20px; width: 25px; background: url(img/button.png) no-repeat;}
+ul.button li a{display: none; width: 150px; height: 25px; padding-top: 5px; position: relative; top: 13px; left: -132px; border-bottom: 1px solid #ffffff; border-right: 1px solid #ffffff; color: #ffffff; text-decoration: none; background-color: #000000; opacity: 0.8; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";}
+ul.button:hover{}
+ul.button:hover li a{display: block;}
+ul.button li a:hover {background-color: #222222;}
+ul.button li a:active {height: 24px; padding-top: 6px;}
+
+.hangman{
+ margin: 10px;
+ padding: 5px 15px 20px 15px;
+ height: 275px;
+ width: 320px;
+ float: left;
+ border: 1px solid #000;
+ background-image: url(img/background2.jpg);
+}
+#focus{background-image: url(img/background.jpg);}
+
+.gallows, .gallows1, .gallows2, .gallows3, .gallows4, .gallows5, .gallows6, .gallows7, .gallows8, .gallows9 {height: 150px; width: 140px; float: left; background: url(img/gallows.png) no-repeat;}
+.gallows{background-position: 0 0px;}
+.gallows1{background-position: 0 -150px;}
+.gallows2{background-position: 0 -300px;}
+.gallows3{background-position: 0 -450px;}
+.gallows4{background-position: 0 -600px;}
+.gallows5{background-position: 0 -750px;}
+.gallows6{background-position: 0 -900px;}
+.gallows7{background-position: 0 -1050px;}
+.gallows8{background-position: 0 -1200px;}
+.gallows9{background-position: 0 -1350px;}
+
+
+ul.missedLetters{float:left;}
+ul.missedLetters li{padding: 15px 1px; width: 15px; float: left; font-size: 12px; font-weight: bold;}
+
+ul.letters{display: block; margin-top: 15px; float: left; position: relative; left: 50%;}
+ul.letters li{display: block; height: 22px; width: 20px; float: left; background: url(img/blank.png) no-repeat; position: relative; left: -50%; font-size: 12px; font-weight: bold;}
+ul.letters li.space{background-image: none; }
+
+div.status{
+ padding: 10px;
+ height: 100px;
+ width: 150px;
+ float: left;
+}
+
+div.status div.score{
+ padding: 15px;
+ padding-right: 20px;
+ height: 40px;
+ width: 40px;
+ float: right;
+ font-weight: bold;
+ font-size: 30px;
+ text-align: right;
+ background: url(img/score.png) no-repeat;
+}
+
+div.status div.circle{
+ padding-top: 10px;
+ width: 150px;
+ height: 80px;
+ font-weight: bold;
+ font-size: 50px;
+ background: url(img/circle.png) no-repeat center;
+}
+div#right{background: url(img/circleright.png) no-repeat center;}
+div#wrong{background: url(img/circlewrong.png) no-repeat center;}
